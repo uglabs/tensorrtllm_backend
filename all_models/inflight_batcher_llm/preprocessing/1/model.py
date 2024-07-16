@@ -415,6 +415,7 @@ class TritonPythonModel:
                         add_special_tokens=self.add_special_tokens)).astype(
                             int) for s in query
             ]
+        print(start_ids)
         if visual_features is not None:
             fake_prompt_id = np.arange(
                 self.vocab_size, self.vocab_size + visual_features.shape[1])
